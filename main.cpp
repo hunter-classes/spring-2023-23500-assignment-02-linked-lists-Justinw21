@@ -5,38 +5,23 @@ int main()
 {
     List *l = new List();
     std::cout << l->toString() << " " << l->length() << "\n";
-    l->insert(0,"a");
+
+    //Both inserts, toString, and length
+    l->insert("a");
     std::cout << l->toString() << " " << l->length() << "\n";
-    l->insert(0,"b");
-    l->insert(0,"c");
-    l->insert(0,"d");
+    l->insert("c");
+    l->insert(1,"b");
+    l->insert("d");
     std::cout << l->toString() << " " << l->length() << "\n";
 
+    //Contains
     std::cout << l->contains("a") << "\n"; // 1
+    std::cout << l->contains("b") << "\n"; // 1
+    std::cout << l->contains("c") << "\n"; // 1
+    std::cout << l->contains("d") << "\n"; // 1
     std::cout << l->contains("e") << "\n"; // 0
-
-    l->destructor();
-    std::cout << l->toString() << " " << l->length() << "\n";
-
-
-    //remove
-    //l->remove(1);
-    //std::cout << l->toString() << " " << l->length() << "\n";
-    //destructor
     
-
-
-  /*
-  try {
-    l->insert(10,"x");
-  } catch (std::exception e){
-    std::cout << "Insert x didn't work\n";
-  }
-  std::cout << l->toString() << "\n";
-  l->insert(2,"inserted at 2");
-  std::cout << l->toString() << "\n";
-  l->insert(5,"inserted at end");
-  std::cout << l->toString() << " " << l->length() << "\n";
-  */
-    return 0;
+    //Remove
+    l->remove(3);
+    std::cout << l->toString() << " " << l->length() << "\n";
 }
