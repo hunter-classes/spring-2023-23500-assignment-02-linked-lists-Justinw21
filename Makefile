@@ -15,4 +15,4 @@ Node.o: Node.cpp Node.h
 OList.o: OList.cpp OList.h Node.h
 
 clean:
-	rm -f main.o Node.o OList.o tests.o make tests
+	rm -f main.o Node.o OList.o tests.o main tests
